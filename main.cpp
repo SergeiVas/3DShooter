@@ -132,7 +132,7 @@ int main() {
                 if (map[int(cx)+int(cy)*map_w]!=' ') { //Как только попали в стену рисуем вертикальные линии для иллюзии 3д
                     size_t icolor = map[int(cx) + int(cy)*map_w] - '0';
                     assert(icolor < ncolors);
-                    size_t column_height = win_h/t; // Расчёт высоты линии
+                    size_t column_height = win_h/(t*cos(angle - player_a)); // Расчёт высоты линии
                     //Рисуем линиюю в правой половине экрана. Если по простому, то центр экрана по оси y - это середина линии
                     draw_rectangle(framebuffer, win_w, win_h, win_w/2+i, win_h / 2 - column_height / 2,
                                    1, column_height, colors[icolor]);
