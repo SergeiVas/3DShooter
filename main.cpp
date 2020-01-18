@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <cassert>
 #include <math.h>
+#include <sstream>
+#include <iomanip>
 
 uint32_t pack_color(const uint8_t r, const uint8_t g, const uint8_t b, const uint8_t a = 255)
 {
@@ -82,44 +84,65 @@ int main() {
 
     const float fov = M_PI / 3;
 
+    const size_t ncolors = 10;
+    std::vector<uint32_t> colors(ncolors);
+    for(size_t i = 0; i < 10; ++i)
+    {
+        colors[i] = pack_color(rand() % 255, rand() % 255, rand() % 255);
+    }
+
     const size_t rect_w = win_w / (map_w * 2);
     const size_t rect_h = win_h / map_h;
-    for (size_t j = 0; j < map_h; ++j)
+
+    for (size_t frame = 0; frame < 360; ++frame)
     {
-        for (int i = 0; i < map_w; ++i)
+        std::stringstream ss;
+        ss << std::setfill('0') << std::setw(5) << frame << ".ppm";
+        player_a += 2 * M_PI / 360;
+
+        framebuffer = std::vector<uint32_t>(win_w * win_h, pack_color(255,255,255));
+
+        for (size_t j = 0; j < map_h; ++j)
         {
-            if (map[i + j*map_w] == ' ') continue;
-            size_t rect_x = i * rect_w;
-            size_t rect_y = j * rect_h;
-            draw_rectangle(framebuffer, win_w, win_h, rect_x, rect_y, rect_w, rect_h,
-                    pack_color(0, 255, 255));
-        }
-    }
-
-    for (size_t i = 0; i < win_w / 2; ++i)
-    {
-        float angle = player_a - fov / 2  + fov * i / float(win_w / 2);  // Расчитали угол для первого луча
-
-        for (float t = 0; t < 20; t += .05) {
-            float cx = player_x + t * cos(angle);
-            float cy = player_y + t * sin(angle);
-
-            size_t pix_x = cx * rect_w;
-            size_t pix_y = cy * rect_h;
-
-            framebuffer[pix_x + pix_y * win_w] = pack_color(160, 160, 160);
-            if (map[int(cx)+int(cy)*map_w]!=' ') { //Как только попали в стену рисуем вертикальные линии для иллюзии 3д
-                size_t column_height = win_h/t; // Расчёт высоты линии
-                //Рисуем линиюю в правой половине экрана. Если по простому, то центр экрана по оси y - это середина линии
-                draw_rectangle(framebuffer, win_w, win_h, win_w/2+i, win_h / 2 - column_height / 2,
-                        1, column_height, pack_color(0, 255, 255));
-
-                break;
+            for (int i = 0; i < map_w; ++i)
+            {
+                if (map[i + j*map_w] == ' ') continue;
+                size_t rect_x = i * rect_w;
+                size_t rect_y = j * rect_h;
+                size_t icolor = map[i + j*map_w] - '0';
+                assert(icolor < ncolors);
+                draw_rectangle(framebuffer, win_w, win_h, rect_x, rect_y, rect_w, rect_h,
+                               colors[icolor]);
             }
         }
+        for (size_t i = 0; i < win_w / 2; ++i)
+        {
+            float angle = player_a - fov / 2  + fov * i / float(win_w / 2);  // Расчитали угол для первого луча
+
+            for (float t = 0; t < 20; t += .01)
+            {
+                float cx = player_x + t * cos(angle);
+                float cy = player_y + t * sin(angle);
+
+                size_t pix_x = cx * rect_w;
+                size_t pix_y = cy * rect_h;
+
+                framebuffer[pix_x + pix_y * win_w] = pack_color(160, 160, 160);
+
+                if (map[int(cx)+int(cy)*map_w]!=' ') { //Как только попали в стену рисуем вертикальные линии для иллюзии 3д
+                    size_t icolor = map[int(cx) + int(cy)*map_w] - '0';
+                    assert(icolor < ncolors);
+                    size_t column_height = win_h/t; // Расчёт высоты линии
+                    //Рисуем линиюю в правой половине экрана. Если по простому, то центр экрана по оси y - это середина линии
+                    draw_rectangle(framebuffer, win_w, win_h, win_w/2+i, win_h / 2 - column_height / 2,
+                                   1, column_height, colors[icolor]);
+
+                    break;
+                }
+            }
+        }
+        drop_ppm_image(ss.str(), framebuffer, win_w, win_h);
     }
-    
-    drop_ppm_image("./out.ppm", framebuffer, win_w, win_h);
 
     return 0;
 }
