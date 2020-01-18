@@ -84,6 +84,9 @@ int main() {
 
     assert(sizeof(map) == map_w * map_h + 1);
 
+    float player_x = 3.456; // player x position
+    float player_y = 2.345; // player y position
+
     for (size_t j = 0; j < win_h; ++j)
     {
         for (size_t i = 0; i < win_w; ++i)
@@ -106,11 +109,13 @@ int main() {
             if (map[i + j*map_w] == ' ') continue;
             size_t rect_x = i * rect_w;
             size_t rect_y = j * rect_h;
-            draw_rectangle(framebuffer, win_w, win_h, rect_x, rect_y, rect_w, rect_h, pack_color(0, 255, 255));
+            draw_rectangle(framebuffer, win_w, win_h, rect_x, rect_y, rect_w, rect_h,
+                    pack_color(0, 255, 255));
         }
     }
 
-
+    draw_rectangle(framebuffer, win_w, win_h, player_x * rect_w, player_y * rect_h, 5, 5,
+            pack_color(255,255,255));
 
     drop_ppm_image("./out.ppm", framebuffer, win_w, win_h);
 
