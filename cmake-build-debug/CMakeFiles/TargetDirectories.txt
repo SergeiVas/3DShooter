@@ -1,0 +1,3 @@
+C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir
+C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
