@@ -6,6 +6,10 @@
 #include <math.h>
 #include <sstream>
 #include <iomanip>
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb/stb_image.h"
+
+
 
 uint32_t pack_color(const uint8_t r, const uint8_t g, const uint8_t b, const uint8_t a = 255)
 {
@@ -51,6 +55,53 @@ void draw_rectangle(std::vector<uint32_t>& img, const size_t img_w, const size_t
     }
 }
 
+bool load_texture(const std::string filename, std::vector<uint32_t>& texture,
+        size_t& text_size, size_t& text_cnt)
+{
+    int nchannels = -1, w, h;
+    unsigned char* pixmap = stbi_load(filename.c_str(), &w, &h, &nchannels, 0);
+
+    if (!pixmap)
+    {
+        std::cerr << "Error: can not load the textures" << std::endl;
+        return false;
+    }
+
+    if (4 != nchannels)
+    {
+        std::cerr << "Error: the texture must be a 32 bit image" << std::endl;
+        std::cerr << nchannels;
+        stbi_image_free(pixmap);
+        return false;
+    }
+
+    text_cnt = w / h;
+    text_size = w / text_cnt;
+
+    if (w != h * int(text_cnt))
+    {
+        std::cerr << "Error: the texture file must contain N "
+                     "square textures packed horizontally" << std::endl;
+        stbi_image_free(pixmap);
+        return false;
+    }
+
+    texture = std::vector<uint32_t>(w*h);
+    for (int j = 0; j < h; ++j)
+    {
+        for (int i = 0; i < w; ++i)
+        {
+            uint8_t  r = pixmap[(i + j*w)*4 + 0];
+            uint8_t  g = pixmap[(i + j*w)*4 + 1];
+            uint8_t  b = pixmap[(i + j*w)*4 + 2];
+            uint8_t  a = pixmap[(i + j*w)*4 + 3];
+            texture[i+j*w] = pack_color(r,g,b,a);
+        }
+    }
+    stbi_image_free(pixmap);
+    return true;
+}
+
 int main() {
 
     const size_t win_w = 1024;
@@ -91,17 +142,29 @@ int main() {
         colors[i] = pack_color(rand() % 255, rand() % 255, rand() % 255);
     }
 
+    std::vector<uint32_t> walltext;
+    size_t  walltext_size;
+    size_t walltext_cnt;
+    if (!load_texture("../walltext.png", walltext, walltext_size,
+            walltext_cnt))
+    {
+        std::cerr << "Failed to load wall textures" << std::endl;
+        return -1;
+    }
+
+
+
     const size_t rect_w = win_w / (map_w * 2);
     const size_t rect_h = win_h / map_h;
 
-    for (size_t frame = 0; frame < 360; ++frame)
+   /* for (size_t frame = 0; frame < 360; ++frame)
     {
         std::stringstream ss;
         ss << std::setfill('0') << std::setw(5) << frame << ".ppm";
         player_a += 2 * M_PI / 360;
 
         framebuffer = std::vector<uint32_t>(win_w * win_h, pack_color(255,255,255));
-
+*/
         for (size_t j = 0; j < map_h; ++j)
         {
             for (int i = 0; i < map_w; ++i)
@@ -115,6 +178,7 @@ int main() {
                                colors[icolor]);
             }
         }
+
         for (size_t i = 0; i < win_w / 2; ++i)
         {
             float angle = player_a - fov / 2  + fov * i / float(win_w / 2);  // Расчитали угол для первого луча
@@ -141,8 +205,19 @@ int main() {
                 }
             }
         }
-        drop_ppm_image(ss.str(), framebuffer, win_w, win_h);
-    }
+
+        const size_t texid = 4;
+        for (size_t i = 0; i < walltext_size; ++i)
+        {
+            for (size_t j = 0; j < walltext_size; ++j)
+            {
+                framebuffer[i + j*win_w] =
+                        walltext[i + texid * walltext_size + j * walltext_size * walltext_cnt];
+            }
+        }
+
+        drop_ppm_image("./out.ppm", framebuffer, win_w, win_h);
+
 
     return 0;
 }
