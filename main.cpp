@@ -117,9 +117,9 @@ int main() {
                        "0     0  1110000"\
                        "0     3        0"\
                        "0   10000      0"\
-                       "0   0   11100  0"\
-                       "0   0   0      0"\
-                       "0   0   1  00000"\
+                       "0   3   11100  0"\
+                       "5   4   0      0"\
+                       "5   4   1  00000"\
                        "0       1      0"\
                        "2       1      0"\
                        "0       0      0"\
@@ -135,13 +135,6 @@ int main() {
 
     const float fov = M_PI / 3;
 
-    const size_t ncolors = 10;
-    std::vector<uint32_t> colors(ncolors);
-    for(size_t i = 0; i < 10; ++i)
-    {
-        colors[i] = pack_color(rand() % 255, rand() % 255, rand() % 255);
-    }
-
     std::vector<uint32_t> walltext;
     size_t  walltext_size;
     size_t walltext_cnt;
@@ -152,19 +145,9 @@ int main() {
         return -1;
     }
 
-
-
     const size_t rect_w = win_w / (map_w * 2);
     const size_t rect_h = win_h / map_h;
 
-   /* for (size_t frame = 0; frame < 360; ++frame)
-    {
-        std::stringstream ss;
-        ss << std::setfill('0') << std::setw(5) << frame << ".ppm";
-        player_a += 2 * M_PI / 360;
-
-        framebuffer = std::vector<uint32_t>(win_w * win_h, pack_color(255,255,255));
-*/
         for (size_t j = 0; j < map_h; ++j)
         {
             for (int i = 0; i < map_w; ++i)
@@ -172,10 +155,10 @@ int main() {
                 if (map[i + j*map_w] == ' ') continue;
                 size_t rect_x = i * rect_w;
                 size_t rect_y = j * rect_h;
-                size_t icolor = map[i + j*map_w] - '0';
-                assert(icolor < ncolors);
+                size_t textid = map[i + j*map_w] - '0';
+                assert(textid < walltext_cnt);
                 draw_rectangle(framebuffer, win_w, win_h, rect_x, rect_y, rect_w, rect_h,
-                               colors[icolor]);
+                               walltext[textid * walltext_size]);
             }
         }
 
@@ -194,25 +177,15 @@ int main() {
                 framebuffer[pix_x + pix_y * win_w] = pack_color(160, 160, 160);
 
                 if (map[int(cx)+int(cy)*map_w]!=' ') { //Как только попали в стену рисуем вертикальные линии для иллюзии 3д
-                    size_t icolor = map[int(cx) + int(cy)*map_w] - '0';
-                    assert(icolor < ncolors);
+                    size_t textid = map[int(cx) + int(cy)*map_w] - '0';
+                    assert(textid < walltext_cnt);
                     size_t column_height = win_h/(t*cos(angle - player_a)); // Расчёт высоты линии
                     //Рисуем линиюю в правой половине экрана. Если по простому, то центр экрана по оси y - это середина линии
                     draw_rectangle(framebuffer, win_w, win_h, win_w/2+i, win_h / 2 - column_height / 2,
-                                   1, column_height, colors[icolor]);
+                                   1, column_height, walltext[textid * walltext_size]);
 
                     break;
                 }
-            }
-        }
-
-        const size_t texid = 4;
-        for (size_t i = 0; i < walltext_size; ++i)
-        {
-            for (size_t j = 0; j < walltext_size; ++j)
-            {
-                framebuffer[i + j*win_w] =
-                        walltext[i + texid * walltext_size + j * walltext_size * walltext_cnt];
             }
         }
 
