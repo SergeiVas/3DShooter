@@ -39,12 +39,18 @@ framebuffer.h
 C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/framebuffer.h
 textures.h
 C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/textures.h
+sprite.h
+C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/sprite.h
 
 C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/map.h
 cstdlib
 -
 
 C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/player.h
+
+C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/sprite.h
+cstdlib
+-
 
 C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/textures.h
 vector

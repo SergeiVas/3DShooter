@@ -9,6 +9,7 @@ CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/framebuffer.h
 CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/main.cpp
 CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/map.h
 CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/player.h
+CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/sprite.h
 CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/textures.h
 CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/utils.h
 
