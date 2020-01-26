@@ -56,32 +56,92 @@ include CMakeFiles/3DShooter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/3DShooter.dir/flags.make
 
-CMakeFiles/3DShooter.dir/main.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
-CMakeFiles/3DShooter.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3DShooter.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\main.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\main.cpp
+CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
+CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\Scripts\main.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\main.cpp
 
-CMakeFiles/3DShooter.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\main.cpp > CMakeFiles\3DShooter.dir\main.cpp.i
+CMakeFiles/3DShooter.dir/Scripts/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/Scripts/main.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\main.cpp > CMakeFiles\3DShooter.dir\Scripts\main.cpp.i
 
-CMakeFiles/3DShooter.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\main.cpp -o CMakeFiles\3DShooter.dir\main.cpp.s
+CMakeFiles/3DShooter.dir/Scripts/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/Scripts/main.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\main.cpp -o CMakeFiles\3DShooter.dir\Scripts\main.cpp.s
+
+CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
+CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj: ../Scripts/framebuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\Scripts\framebuffer.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\framebuffer.cpp
+
+CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\framebuffer.cpp > CMakeFiles\3DShooter.dir\Scripts\framebuffer.cpp.i
+
+CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\framebuffer.cpp -o CMakeFiles\3DShooter.dir\Scripts\framebuffer.cpp.s
+
+CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
+CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj: ../Scripts/map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\Scripts\map.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\map.cpp
+
+CMakeFiles/3DShooter.dir/Scripts/map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/Scripts/map.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\map.cpp > CMakeFiles\3DShooter.dir\Scripts\map.cpp.i
+
+CMakeFiles/3DShooter.dir/Scripts/map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/Scripts/map.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\map.cpp -o CMakeFiles\3DShooter.dir\Scripts\map.cpp.s
+
+CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
+CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj: ../Scripts/textures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\Scripts\textures.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\textures.cpp
+
+CMakeFiles/3DShooter.dir/Scripts/textures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/Scripts/textures.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\textures.cpp > CMakeFiles\3DShooter.dir\Scripts\textures.cpp.i
+
+CMakeFiles/3DShooter.dir/Scripts/textures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/Scripts/textures.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\textures.cpp -o CMakeFiles\3DShooter.dir\Scripts\textures.cpp.s
+
+CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj: CMakeFiles/3DShooter.dir/flags.make
+CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj: ../Scripts/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\3DShooter.dir\Scripts\utils.cpp.obj -c C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\utils.cpp
+
+CMakeFiles/3DShooter.dir/Scripts/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3DShooter.dir/Scripts/utils.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\utils.cpp > CMakeFiles\3DShooter.dir\Scripts\utils.cpp.i
+
+CMakeFiles/3DShooter.dir/Scripts/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3DShooter.dir/Scripts/utils.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gefre\Desktop\Sezino\C++\3DShooter\Scripts\utils.cpp -o CMakeFiles\3DShooter.dir\Scripts\utils.cpp.s
 
 # Object files for target 3DShooter
 3DShooter_OBJECTS = \
-"CMakeFiles/3DShooter.dir/main.cpp.obj"
+"CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj" \
+"CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj" \
+"CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj" \
+"CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj" \
+"CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj"
 
 # External object files for target 3DShooter
 3DShooter_EXTERNAL_OBJECTS =
 
-3DShooter.exe: CMakeFiles/3DShooter.dir/main.cpp.obj
+3DShooter.exe: CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj
+3DShooter.exe: CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj
+3DShooter.exe: CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj
+3DShooter.exe: CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj
+3DShooter.exe: CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj
 3DShooter.exe: CMakeFiles/3DShooter.dir/build.make
 3DShooter.exe: CMakeFiles/3DShooter.dir/linklibs.rsp
 3DShooter.exe: CMakeFiles/3DShooter.dir/objects1.rsp
 3DShooter.exe: CMakeFiles/3DShooter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable 3DShooter.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gefre\Desktop\Sezino\C++\3DShooter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable 3DShooter.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\3DShooter.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

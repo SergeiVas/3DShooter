@@ -122,32 +122,140 @@ depend:
 	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/build
 .PHONY : 3DShooter/fast
 
-main.obj: main.cpp.obj
+Scripts/framebuffer.obj: Scripts/framebuffer.cpp.obj
 
-.PHONY : main.obj
+.PHONY : Scripts/framebuffer.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+Scripts/framebuffer.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj
+.PHONY : Scripts/framebuffer.cpp.obj
 
-main.i: main.cpp.i
+Scripts/framebuffer.i: Scripts/framebuffer.cpp.i
 
-.PHONY : main.i
+.PHONY : Scripts/framebuffer.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/main.cpp.i
-.PHONY : main.cpp.i
+Scripts/framebuffer.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.i
+.PHONY : Scripts/framebuffer.cpp.i
 
-main.s: main.cpp.s
+Scripts/framebuffer.s: Scripts/framebuffer.cpp.s
 
-.PHONY : main.s
+.PHONY : Scripts/framebuffer.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/main.cpp.s
-.PHONY : main.cpp.s
+Scripts/framebuffer.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.s
+.PHONY : Scripts/framebuffer.cpp.s
+
+Scripts/main.obj: Scripts/main.cpp.obj
+
+.PHONY : Scripts/main.obj
+
+# target to build an object file
+Scripts/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj
+.PHONY : Scripts/main.cpp.obj
+
+Scripts/main.i: Scripts/main.cpp.i
+
+.PHONY : Scripts/main.i
+
+# target to preprocess a source file
+Scripts/main.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/main.cpp.i
+.PHONY : Scripts/main.cpp.i
+
+Scripts/main.s: Scripts/main.cpp.s
+
+.PHONY : Scripts/main.s
+
+# target to generate assembly for a file
+Scripts/main.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/main.cpp.s
+.PHONY : Scripts/main.cpp.s
+
+Scripts/map.obj: Scripts/map.cpp.obj
+
+.PHONY : Scripts/map.obj
+
+# target to build an object file
+Scripts/map.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj
+.PHONY : Scripts/map.cpp.obj
+
+Scripts/map.i: Scripts/map.cpp.i
+
+.PHONY : Scripts/map.i
+
+# target to preprocess a source file
+Scripts/map.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/map.cpp.i
+.PHONY : Scripts/map.cpp.i
+
+Scripts/map.s: Scripts/map.cpp.s
+
+.PHONY : Scripts/map.s
+
+# target to generate assembly for a file
+Scripts/map.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/map.cpp.s
+.PHONY : Scripts/map.cpp.s
+
+Scripts/textures.obj: Scripts/textures.cpp.obj
+
+.PHONY : Scripts/textures.obj
+
+# target to build an object file
+Scripts/textures.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj
+.PHONY : Scripts/textures.cpp.obj
+
+Scripts/textures.i: Scripts/textures.cpp.i
+
+.PHONY : Scripts/textures.i
+
+# target to preprocess a source file
+Scripts/textures.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/textures.cpp.i
+.PHONY : Scripts/textures.cpp.i
+
+Scripts/textures.s: Scripts/textures.cpp.s
+
+.PHONY : Scripts/textures.s
+
+# target to generate assembly for a file
+Scripts/textures.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/textures.cpp.s
+.PHONY : Scripts/textures.cpp.s
+
+Scripts/utils.obj: Scripts/utils.cpp.obj
+
+.PHONY : Scripts/utils.obj
+
+# target to build an object file
+Scripts/utils.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj
+.PHONY : Scripts/utils.cpp.obj
+
+Scripts/utils.i: Scripts/utils.cpp.i
+
+.PHONY : Scripts/utils.i
+
+# target to preprocess a source file
+Scripts/utils.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/utils.cpp.i
+.PHONY : Scripts/utils.cpp.i
+
+Scripts/utils.s: Scripts/utils.cpp.s
+
+.PHONY : Scripts/utils.s
+
+# target to generate assembly for a file
+Scripts/utils.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/utils.cpp.s
+.PHONY : Scripts/utils.cpp.s
 
 # Help Target
 help:
@@ -158,9 +266,21 @@ help:
 	@echo ... 3DShooter
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... Scripts/framebuffer.obj
+	@echo ... Scripts/framebuffer.i
+	@echo ... Scripts/framebuffer.s
+	@echo ... Scripts/main.obj
+	@echo ... Scripts/main.i
+	@echo ... Scripts/main.s
+	@echo ... Scripts/map.obj
+	@echo ... Scripts/map.i
+	@echo ... Scripts/map.s
+	@echo ... Scripts/textures.obj
+	@echo ... Scripts/textures.i
+	@echo ... Scripts/textures.s
+	@echo ... Scripts/utils.obj
+	@echo ... Scripts/utils.i
+	@echo ... Scripts/utils.s
 .PHONY : help
 
 
