@@ -95,6 +95,9 @@
 		<Unit filename="C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/map.h">
 			<Option target="3DShooter"/>
 		</Unit>
+		<Unit filename="C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/sprite.cpp">
+			<Option target="3DShooter"/>
+		</Unit>
 		<Unit filename="C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/sprite.h">
 			<Option target="3DShooter"/>
 		</Unit>

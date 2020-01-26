@@ -203,6 +203,33 @@ Scripts/map.cpp.s:
 	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/map.cpp.s
 .PHONY : Scripts/map.cpp.s
 
+Scripts/sprite.obj: Scripts/sprite.cpp.obj
+
+.PHONY : Scripts/sprite.obj
+
+# target to build an object file
+Scripts/sprite.cpp.obj:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.obj
+.PHONY : Scripts/sprite.cpp.obj
+
+Scripts/sprite.i: Scripts/sprite.cpp.i
+
+.PHONY : Scripts/sprite.i
+
+# target to preprocess a source file
+Scripts/sprite.cpp.i:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.i
+.PHONY : Scripts/sprite.cpp.i
+
+Scripts/sprite.s: Scripts/sprite.cpp.s
+
+.PHONY : Scripts/sprite.s
+
+# target to generate assembly for a file
+Scripts/sprite.cpp.s:
+	$(MAKE) -f CMakeFiles\3DShooter.dir\build.make CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.s
+.PHONY : Scripts/sprite.cpp.s
+
 Scripts/textures.obj: Scripts/textures.cpp.obj
 
 .PHONY : Scripts/textures.obj
@@ -275,6 +302,9 @@ help:
 	@echo ... Scripts/map.obj
 	@echo ... Scripts/map.i
 	@echo ... Scripts/map.s
+	@echo ... Scripts/sprite.obj
+	@echo ... Scripts/sprite.i
+	@echo ... Scripts/sprite.s
 	@echo ... Scripts/textures.obj
 	@echo ... Scripts/textures.i
 	@echo ... Scripts/textures.s

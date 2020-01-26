@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/framebuffer.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj"
   "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/main.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj"
   "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/map.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj"
+  "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/sprite.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.obj"
   "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/textures.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj"
   "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/Scripts/utils.cpp" "C:/Users/gefre/Desktop/Sezino/C++/3DShooter/cmake-build-debug/CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj"
   )

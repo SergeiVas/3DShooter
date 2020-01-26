@@ -16,6 +16,9 @@ CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj: ../Scripts/utils.h
 CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj: ../Scripts/map.cpp
 CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj: ../Scripts/map.h
 
+CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.obj: ../Scripts/sprite.cpp
+CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.obj: ../Scripts/sprite.h
+
 CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj: ../Scripts/textures.cpp
 CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj: ../Scripts/textures.h
 CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj: ../Scripts/utils.h

@@ -6,6 +6,7 @@
 #include <cassert>
 #include <sstream>
 #include <iomanip>
+#include <algorithm>
 
 #include "map.h"
 #include "utils.h"
@@ -50,12 +51,11 @@ void draw_sprite(Sprite &sprite, std::vector<float>& depth_buffer,
     while (sprite_dir - player.a >  M_PI) sprite_dir -= 2*M_PI;
     while (sprite_dir - player.a < -M_PI) sprite_dir += 2*M_PI;
 
-    float sprite_dist = std::sqrt(pow(player.x_pos - sprite.x, 2) + pow(player.y_pos - sprite.y, 2));
     size_t sprite_screen_size;
 
-    if (sprite_dist)
+    if (sprite.player_dist)
     {
-        sprite_screen_size = std::min(1000, static_cast<int>(fb.image_height / sprite_dist));
+        sprite_screen_size = std::min(1000, static_cast<int>(fb.image_height / sprite.player_dist));
     }
     else
     {
@@ -68,7 +68,7 @@ void draw_sprite(Sprite &sprite, std::vector<float>& depth_buffer,
     for (size_t i = 0; i < sprite_screen_size; ++i)
     {
         if (h_offset + i < 0 || h_offset + i >= fb.image_width / 2) continue;
-        if (depth_buffer[h_offset + i] < sprite_dist) continue;
+        if (depth_buffer[h_offset + i] < sprite.player_dist) continue;
         for (size_t j = 0; j < sprite_screen_size; ++j)
         {
             if (v_offset + j < 0 || v_offset + j >= fb.image_height) continue;
@@ -140,7 +140,14 @@ void render(FrameBuffer& fb, Map& map, Player& player, std::vector<Sprite>& spri
         }
     }
 
-    for (size_t i=0; i < sprites.size(); ++i)
+    for (size_t i = 0; i < sprites.size(); ++i)
+    {
+        sprites[i].player_dist = std::sqrt(pow(player.x_pos - sprites[i].x, 2) +
+                pow(player.y_pos - sprites[i].y, 2));
+    }
+    std::sort(sprites.begin(), sprites.end()); // sort it from farthest to closest
+
+    for (size_t i = 0; i < sprites.size(); ++i)
     {
         map_show_sprite(sprites[i], fb, map);
         draw_sprite(sprites[i],depth_buffer, fb, player, tex_monsters);
@@ -161,7 +168,8 @@ int main() {
         return -1;
     }
 
-    std::vector<Sprite> sprites{ {1.834, 8.765, 0}, {5.323, 5.365, 1}, {4.123, 10.265, 1} };
+    std::vector<Sprite> sprites{ {3.523, 3.812, 2}, {1.834, 8.765, 0},
+                                 {5.323, 5.365, 1}, {4.123, 10.265, 1} };
 
     for (size_t frame = 0; frame < 1; ++frame)
     {

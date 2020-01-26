@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/3DShooter.dir/Scripts/framebuffer.cpp.obj"
   "CMakeFiles/3DShooter.dir/Scripts/main.cpp.obj"
   "CMakeFiles/3DShooter.dir/Scripts/map.cpp.obj"
+  "CMakeFiles/3DShooter.dir/Scripts/sprite.cpp.obj"
   "CMakeFiles/3DShooter.dir/Scripts/textures.cpp.obj"
   "CMakeFiles/3DShooter.dir/Scripts/utils.cpp.obj"
   "lib3DShooter.dll.a"
